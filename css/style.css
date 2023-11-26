@@ -1,0 +1,629 @@
+/* Ini merupakan style utama dari website ini */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url(../img/bg3.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: black;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: rgb(109, 108, 108);
+}
+a {
+  text-decoration: none;
+}
+.sha-main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .sha-main-container {
+    width: 90%;
+  }
+}
+
+/*Titles*/
+.sha-section-title {
+  margin: 1rem 0 3rem;
+  font-size: 2rem;
+}
+
+.sha-pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: rgb(109, 108, 108);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.sha-pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: rgb(196, 196, 196);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+/* Akhir Titles */
+
+/*Layout*/
+.sha-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  height: auto;
+}
+/* Akhir Layout */
+
+/*logo dan navigasi menu*/
+.sha-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.sha-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+.sha-nav ul li a:hover {
+  color: #525252;
+}
+.sha-logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.sha-logo a {
+  color: black;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+nav ul li a {
+  color: black;
+}
+nav ul li .sha-1,
+nav ul li .sha-2,
+nav ul li .sha-3,
+nav ul li .sha-4,
+nav ul li .sha-5,
+nav ul li .sha-6,
+nav ul li .sha-7 {
+  background-color: rgba(170, 170, 170, 0.65);
+  border-radius: 3px;
+  padding: 15px;
+  width: 100%;
+  color: rgb(78, 78, 78);
+}
+
+/* Akhir logo dan nav */
+
+/*Burger*/
+.sha-burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+}
+.sha-burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+/* Akhir Burger */
+
+/*Hero Section*/
+#sha-hero {
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.sha-hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+.sha-hero-right img {
+  width: 80%;
+  /*border: 5px solid rgba(128, 128, 128, 0.1);*/
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 5px;
+}
+.sha-hero-right {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+.sha-btn-next {
+  width: 50%;
+  padding: 0.75rem 1.3rem;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+.sha-btn-next:hover {
+  background: #3e3f40;
+}
+/* akhir Hero */
+
+/*About section*/
+.sha-hero-about {
+  display: flex;
+  justify-content: center;
+}
+.sha-hero-about img {
+  width: 500px;
+}
+#sha-about {
+  background-color: rgb(240, 240, 240);
+  padding: 6rem 0;
+}
+.sha-about .sha-pre-title {
+  margin: 0 auto;
+}
+.sha-about-title {
+  text-align: center;
+  padding-top: 2rem;
+}
+.sha-about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 0.7fr 0.6fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.sha-about-center img {
+  width: 300px;
+  border-radius: 100px;
+  /* border: 1px solid black; */
+}
+.sha-hobby-right {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+.sha-text {
+  text-align: justify;
+}
+.sha-about-right ul {
+  line-height: 1.5rem;
+  padding: 0 1rem;
+  list-style: none;
+}
+.sha-about-left {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.sha-btn-about {
+  width: 100px;
+  height: 100px;
+  padding: 0.75rem 1.3rem;
+  background-color: grey;
+  color: white;
+  font-size: 25px;
+  border: none;
+  box-shadow: rgba(100, 100, 100, 0.4) 3px 3px 5px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+.sha-btn-about:hover {
+  background: #3e3f40;
+}
+/* Hobi section */
+#sha-hobbies {
+  padding: 6rem 0;
+  background-color: white;
+}
+.sha-hobbies .sha-pre-title {
+  margin: 0 auto;
+}
+.sha-hobby-title {
+  text-align: center;
+}
+.sha-hobby-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+.sha-hobby-name {
+  margin: 0.5rem 0 1rem;
+}
+.sha-hobby-right img {
+  width: 500px;
+  border: 5px solid rgba(128, 128, 128, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 5px;
+}
+.sha-hobby-right {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+/* akhir HOBI dan Akhir ABOUT */
+
+/*Task section*/
+.sha-hero-task {
+  display: flex;
+  justify-content: center;
+}
+.sha-hero-task img {
+  width: 500px;
+}
+#sha-tasks {
+  background-color: white;
+  padding: 6rem 0;
+}
+.sha-tasks .sha-pre-title {
+  margin: 0 auto;
+}
+.sha-tasks-title {
+  text-align: center;
+}
+.sha-task {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px;
+}
+.sha-task-cover {
+  height: 250px;
+}
+.sha-task-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sha-task-info {
+  padding: 2rem 1.5rem;
+}
+.sha-task-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.sha-task h4 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.sha-task h4:hover {
+  color: blue;
+}
+/* Akhir TASK */
+
+/*Portfolio section*/
+.sha-hero-portfolio {
+  display: flex;
+  justify-content: center;
+}
+.sha-hero-portfolio img {
+  width: 500px;
+}
+#sha-portfolios {
+  background: white;
+  padding: 6rem 0;
+}
+.sha-portfolios .sha-pre-title {
+  margin: 0 auto;
+}
+.sha-portfolios-title {
+  text-align: center;
+}
+.sha-portfolio {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px;
+  background: white;
+}
+.sha-portfolio-cover {
+  height: 300px;
+}
+.sha-portfolio-cover img {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  object-fit: cover;
+  border: 1px solid lightgray;
+}
+.sha-portfolio-info {
+  padding: 2rem 1.5rem;
+}
+.sha-portfolio-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.sha-portfolio h4 {
+  font-weight: 540;
+  font-size: 1.1rem;
+}
+.sha-portfolio-title a svg:hover {
+  fill: blue;
+}
+.sha-portfolio-title a svg {
+  transition: 0.2s ease-in-out;
+}
+.sha-portfolio-tags {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.sha-portfolio-tags div {
+  font-size: 0.9rem;
+  border: 1px solid rgb(198, 198, 198);
+  padding: 0.4rem 1rem;
+  color: gray;
+}
+/* akhir PORTFOLIO */
+
+/* Skills and Education */
+#sha-skills {
+  padding: 6rem 0;
+  background-color: white;
+}
+.sha-skills .sha-pre-title {
+  margin: 0 auto;
+}
+.sha-skill-title {
+  text-align: center;
+}
+.sha-hero-skill {
+  display: flex;
+  justify-content: center;
+}
+.sha-hero-skill img {
+  width: 500px;
+}
+.sha-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+.sha-education {
+  display: flex;
+  gap: 2rem;
+}
+.sha-education .sha-line {
+  padding: 0 0.7rem;
+}
+.sha-education .sha-line div {
+  width: 2px;
+  height: 100%;
+  background: rgb(198, 198, 198);
+  position: relative;
+}
+.sha-education-info p {
+  margin: 0.6rem 0 1.4rem;
+}
+.sha-education-years {
+  margin-bottom: 3rem;
+}
+/* dot on line */
+.sha-education .sha-line div:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: rgb(198, 198, 198);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+.sha-skills-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.sha-skills-right ul {
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+/* iconnn skill*/
+#sha-icon-skill {
+  padding: 6rem 0;
+}
+.sha-skills img {
+  max-width: 1500px;
+  width: 100%;
+  /* border: 1px solid #000; */
+  margin-left: 40px;
+  padding-top: 40px;
+}
+/* akhir icon skill dan SKILL section*/
+
+/* Contact section */
+.sha-hero-contact {
+  display: flex;
+  justify-content: center;
+}
+.sha-hero-contact img {
+  width: 500px;
+}
+#sha-contacts {
+  padding: 6rem 6rem;
+  background: rgb(240, 240, 240);
+}
+.sha-contacts .sha-pre-title {
+  margin: 0 auto;
+}
+.sha-contact-title {
+  text-align: center;
+}
+.sha-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin: auto;
+  padding: 0 1rem;
+}
+.sha-contact-form div {
+  margin-bottom: 1.4rem;
+}
+.sha-contact-form input,
+.sha-contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Roboto", sans-serif;
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  resize: none;
+}
+.sha-contact-form input:focus,
+.sha-contact-form textarea:focus {
+  outline: none;
+  border: 1px solid gray;
+}
+.sha-btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.sha-btn-submit:hover {
+  background: #3e3f40;
+}
+.sha-contact-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.sha-contact-item-icon {
+  background: rgb(252, 251, 251);
+  width: 53px;
+  height: 53px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sha-contact-item-icon svg {
+  fill: grey;
+}
+.sha-contact-item-detail h4 {
+  margin-bottom: 0.6rem;
+}
+/* akhir CONTACT */
+
+/* footer */
+footer {
+  padding: 4rem 0;
+  text-align: center;
+}
+.sha-footer-icon {
+  margin-bottom: 1rem;
+}
+.sha-footer-icon a {
+  margin: 0 0.5rem;
+}
+.sha-footer-icon svg {
+  fill: #3e3f40;
+}
+.sha-footer-icon a:hover svg {
+  fill: black;
+}
+/* akhir FOOTER */
+
+/* Range Skill */
+.sha-skill-progres {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+.sha-range-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #3e3f40;
+}
+.sha-skill-bar {
+  height: 14px;
+  background: #3e3f40;
+  border-radius: 3px;
+}
+.sha-skill-per {
+  height: 14px;
+  background: lightgray;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 1.5s 1;
+}
+.sha-skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: rgb(182, 182, 182);
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+.sha-skill-per::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgb(182, 182, 182);
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+@keyframes fillBars {
+  from {
+    width: 0;
+  }
+  top {
+    width: 100%;
+  }
+}
+/* Akhir Range Skill */

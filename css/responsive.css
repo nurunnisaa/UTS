@@ -1,0 +1,207 @@
+/* Style responsive utama dari website */
+
+@media screen and (max-width: 1000px) {
+  p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+  .sha-grid-3 {
+    gap: 1rem;
+  }
+  .sha-skill-right ul li {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 825px) {
+  /* burger */
+  .sha-burger {
+    display: block;
+    cursor: pointer;
+  }
+  .sha-toggle-burger .sha-line-1 {
+    transform: rotate(-45deg) translate(-5px, 8px);
+  }
+  .sha-toggle-burger .sha-line-2 {
+    opacity: 0;
+  }
+  .sha-toggle-burger .sha-line-3 {
+    transform: rotate(45deg) translate(-5px, -8px);
+  }
+  /* navigasi */
+  nav {
+    position: fixed;
+    width: 50%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    flex-direction: column;
+    background: white;
+    border-left: 1px solid lightgray;
+    z-index: 9;
+    transform: translateX(100%);
+    transition: 0.2s ease-in-out;
+  }
+  nav ul {
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sha-nav-active {
+    transform: translateX(0);
+  }
+
+  /* Para section id */
+  #sha-about {
+    padding: 4rem 0;
+  }
+  #sha-hero-about {
+    padding: 4rem 0;
+  }
+  #sha-tasks {
+    padding: 4rem 0;
+  }
+  #sha-portfolios {
+    padding: 4rem 0;
+  }
+  #sha-skills {
+    padding: 4rem 0;
+  }
+  #sha-contacts {
+    padding: 4rem 0;
+  }
+  #sha-hobbies {
+    padding: 4rem 0;
+  }
+
+  /* Tittle */
+  .sha-section-title {
+    font-size: 1.6rem;
+    margin: 0.6rem 0 2.5rem;
+  }
+  .sha-pre-title {
+    font-size: 0.8rem;
+  }
+
+  /* hero section */
+  #sha-hero {
+    grid-template-columns: 1fr;
+    height: fit-content;
+  }
+  .sha-hero-right {
+    order: -1;
+  }
+  .sha-hero-right img {
+    width: 70%;
+  }
+  .sha-hero-left {
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+  .sha-hero-left .sha-pre-title {
+    margin: 0 auto;
+  }
+  .sha-hero-name {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* body */
+  .sha-image img {
+    width: 200px;
+  }
+
+  /* about */
+  .sha-text p {
+    margin: 0 1rem;
+  }
+  .sha-about-grid {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+  .sha-about-center {
+    order: -1;
+  }
+  .sha-about-center img {
+    width: 200px;
+  }
+
+  /* hobi */
+  .sha-hobby-grid {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+  .sha-hobby-right {
+    padding: 3rem;
+  }
+  .sha-hobby-right {
+    order: -1;
+  }
+  .sha-hobby-right img {
+    width: 350px;
+  }
+
+  /* skill section */
+  .sha-skills-grid {
+    gap: 1rem;
+  }
+  .sha-skills img {
+    margin-left: 20px;
+  }
+
+  /* COBA galeri */
+  .sha-galeri {
+    padding: 0 2rem;
+  }
+  /* COBALAGI */
+  .sha-galeeeri {
+    padding: 0 10px;
+  }
+  .sha-galeeeri li {
+    width: 500px;
+    height: 400px;
+  }
+  .sha-galeeeri li img {
+    width: 500px;
+    height: 400px;
+  }
+
+  /* overlay galeri */
+  .sha-overlay {
+    padding: 0;
+  }
+
+  .sha-galeri .sha-overlay img {
+    width: 100%;
+  }
+  .sha-galeeeri li .sha-overlay img {
+    width: 50%;
+    height: 50%;
+  }
+  /* footer */
+  footer {
+    padding: 2rem 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* title */
+  .sha-section-title {
+    font-size: 1.3rem;
+  }
+  .sha-pre-title {
+    font-size: 0.7rem;
+  }
+
+  /* COBAgaleri */
+  .sha-galeri {
+    padding: 0 2rem;
+  }
+
+  .sha-hero-about img,
+  .sha-hero-skill img,
+  .sha-hero-task img,
+  .sha-hero-portfolio img,
+  .sha-hero-contact img {
+    width: 350px;
+  }
+}

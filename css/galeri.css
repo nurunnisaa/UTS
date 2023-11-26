@@ -1,0 +1,432 @@
+/* Style untuk Percobaan */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+/* COBAgaleri */
+#sha-galleries {
+  height: 720px;
+  display: grid;
+  grid-template-columns: repeat(auto, minmax(300px, 1fr));
+  align-items: center;
+  overflow: auto;
+}
+/* .sha-my-gallery {
+  padding: 3px;
+  width: 100%;
+  background-color: white;
+  height: 100px;
+  position: fixed;
+  top: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+.sha-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+  padding-top: 50px;
+}
+.sha-gallery-title {
+  border-bottom: 3px solid black;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+.sha-gallery-title span {
+  font-weight: 100;
+  /* color: black; */
+}
+
+/* COBAgaleri*/
+.sha-galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 15px;
+  height: auto;
+  padding: 0 4rem;
+}
+.sha-foto {
+  /* width: 300px; */
+  /* height: 200px; */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px;
+  background: white;
+}
+.sha-foto img {
+  width: 100%;
+  height: 100;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* COBALAGI */
+.sha-galeeeri {
+  padding-bottom: 10px;
+}
+.sha-galeeeri li {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid lightgray;
+  float: left;
+  margin-right: 10px;
+  position: relative;
+}
+.sha-galeeeri li img {
+  width: 300px;
+  height: 200px;
+}
+.sha-galeeeri li span {
+  display: block;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+.sha-galeeeri li a:hover span {
+  opacity: 1;
+}
+.sha-clear {
+  clear: both;
+}
+
+/* Akhir COBALAGI */
+
+/* overlay */
+.sha-overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.8s;
+  text-align: center;
+  padding: 55px;
+}
+.sha-overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sha-galeri .sha-foto .sha-overlay img {
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+.sha-galeeeri li .sha-overlay img {
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.sha-overlay:target img {
+  animation: zoomDanFade 0.3s;
+}
+.sha-overlay .sha-close {
+  position: absolute;
+  top: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Akhir Overlay */
+
+/* animasi overlay */
+@keyframes zoomDanFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* cobaTERUS */
+section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+section .lightBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+.lightBox .lightbox-content {
+  position: fixed;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -55%);
+  max-width: 700px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+}
+.lightbox-content .close {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  font-size: 25px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+section .logoBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+section .logoBox a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+section .logoBox .text-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+}
+.logoBox .text-content .nikname {
+  font-size: 12px;
+  margin-top: -1px;
+}
+section .logoBox .icons i {
+  height: 35px;
+  width: 35px;
+  background: #ccc;
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+.logoBox .icons i:hover {
+  background: #4d4d4d;
+}
+section .lightBox .showImage {
+  height: 100%;
+  width: 100%;
+}
+.lightBox .showImage .gambar {
+  max-width: 900px;
+  width: 100%;
+  max-height: 700px;
+}
+.showImage .gambar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+section .photo-gallery {
+  max-width: 1300px;
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+  margin: auto;
+}
+.photo-gallery header {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  background: #24292d;
+  padding: 20px 0;
+  letter-spacing: 1px;
+}
+.photo-gallery .photo-container {
+  columns: 4;
+  margin-top: 20px;
+}
+.photo-container img {
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.photo-container .photo-box {
+  position: relative;
+  cursor: pointer;
+}
+.photo-box .logoBox {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.photo-box:hover .logoBox {
+  opacity: 1;
+  pointer-events: auto;
+}
+.photo-box .logoBox .icons i {
+  height: 20px;
+  width: 20px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+  margin: 0 5px;
+  color: #9e9d9d;
+  background: #ffffffbe;
+}
+.logoBox .icons i:hover {
+  color: #6d6d6d;
+}
+/* VIDEO */
+.sha-containerr {
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 10px;
+}
+.sha-containerr .sha-main-vid-container {
+  flex: 1 1 700px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  padding: 15px;
+}
+.sha-containerr .sha-main-vid-container .sha-main-video {
+  width: 100%;
+  margin-bottom: 7px;
+  border-radius: 5px;
+}
+.sha-containerr .sha-main-vid-container .sha-main-vid-title {
+  font-size: 20px;
+  color: #444;
+}
+.sha-containerr .sha-vid-list-container {
+  flex: 1 1 350px;
+  height: 485px;
+  overflow-y: scroll;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  padding: 15px;
+}
+.sha-containerr .sha-vid-list-container::-webkit-scrollbar {
+  width: 10px;
+}
+.sha-containerr .sha-vid-list-container::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 5px;
+}
+.sha-containerr .sha-vid-list-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+.sha-containerr .sha-vid-list-container .sha-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.sha-containerr .sha-vid-list-container .sha-list:last-child {
+  margin-bottom: 0;
+}
+.sha-containerr .sha-vid-list-container .sha-list.active {
+  background-color: #888;
+}
+.sha-containerr .sha-vid-list-container .sha-list.active .sha-list-title {
+  color: #fff;
+}
+.sha-containerr .sha-vid-list-container .sha-list .sha-list-video {
+  width: 100px;
+  border-radius: 5px;
+}
+.sha-containerr .sha-vid-list-container .sha-list .sha-list-title {
+  font-size: 17px;
+  color: #444;
+}
+
+@media (max-width: 1200px) {
+  .sha-containerr {
+    margin: 0;
+  }
+}
+@media (max-width: 450px) {
+  .lightbox-content .close {
+    top: -40px;
+    left: 10px;
+  }
+  .sha-containerr .sha-main-vid-container .sha-main-vid-title {
+    font-size: 15px;
+    text-align: center;
+  }
+  .sha-containerr .sha-vid-list-container .sha-list {
+    flex-flow: column;
+    gap: 10px;
+  }
+  .sha-containerr .sha-vid-list-container .sha-list .sha-list-video {
+    width: 100%;
+  }
+  .sha-containerr .sha-vid-list-container .sha-list .sha-list-title {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+/* Akhir VIDEO */
+@media (max-width: 1032px) {
+  .lightbox-content .close {
+    top: -40px;
+    left: 10px;
+  }
+  .photo-gallery .photo-container {
+    columns: 3;
+  }
+}
+@media (max-width: 825px) {
+  .photo-gallery .photo-container {
+    columns: 2;
+  }
+}
+@media screen and (max-width: 640px) {
+  .photo-gallery header {
+    font-size: 25px;
+  }
+}
